@@ -61,7 +61,7 @@ export function TopCategoriesChart({ data }: TopCategoriesChartProps) {
             tickLine={false}
           />
           <Tooltip
-            formatter={(value: number) => formatCurrency(value)}
+            formatter={(value) => formatCurrency(Number(value))}
             contentStyle={{
               backgroundColor: '#ffffff',
               border: '1px solid #e2e8f0',

@@ -16,7 +16,7 @@ export default async function EditTransactionPage({ params }: EditTransactionPag
 
   try {
     const transactions = await transactionService.list(session.user.id)
-    const transaction = transactions.find((tx: Transaction) => tx.id === id)
+    const transaction = transactions.data.find((tx: Transaction) => tx.id === id)
     if (!transaction) notFound()
 
     return <EditTransactionClient transaction={transaction} />

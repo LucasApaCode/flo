@@ -17,8 +17,24 @@ export default function Image() {
           padding: '80px',
           background: '#f9f9ff',
           fontFamily: 'system-ui, sans-serif',
+          position: 'relative',
         }}
       >
+        {/* Decorative circle */}
+        <div
+          style={{
+            position: 'absolute',
+            right: '-100px',
+            top: '-100px',
+            width: '500px',
+            height: '500px',
+            borderRadius: '50%',
+            background: '#006c49',
+            opacity: 0.06,
+            display: 'flex',
+          }}
+        />
+
         {/* Top: logo */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
           <div
@@ -43,21 +59,14 @@ export default function Image() {
         </div>
 
         {/* Center: headline */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          <div
-            style={{
-              fontSize: '72px',
-              fontWeight: 800,
-              color: '#111c2d',
-              lineHeight: 1.1,
-              letterSpacing: '-2px',
-            }}
-          >
-            Controlá tus
-            <br />
-            finanzas personales.
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div style={{ display: 'flex', fontSize: '72px', fontWeight: 800, color: '#111c2d', lineHeight: 1.1, letterSpacing: '-2px' }}>
+            Controla tus finanzas
           </div>
-          <div style={{ fontSize: '28px', color: '#3c4a42', fontWeight: 500 }}>
+          <div style={{ display: 'flex', fontSize: '72px', fontWeight: 800, color: '#006c49', lineHeight: 1.1, letterSpacing: '-2px' }}>
+            personales.
+          </div>
+          <div style={{ display: 'flex', fontSize: '28px', color: '#3c4a42', fontWeight: 500, marginTop: '12px' }}>
             Ingresos, gastos y estadísticas en un solo lugar.
           </div>
         </div>
@@ -68,6 +77,7 @@ export default function Image() {
             <div
               key={label}
               style={{
+                display: 'flex',
                 padding: '10px 20px',
                 borderRadius: '100px',
                 background: '#006c491a',
@@ -80,20 +90,6 @@ export default function Image() {
             </div>
           ))}
         </div>
-
-        {/* Decorative circle */}
-        <div
-          style={{
-            position: 'absolute',
-            right: '-100px',
-            top: '-100px',
-            width: '500px',
-            height: '500px',
-            borderRadius: '50%',
-            background: '#006c49',
-            opacity: 0.06,
-          }}
-        />
       </div>
     ),
     { ...size }

@@ -140,7 +140,7 @@ export function TransactionForm({
             </label>
             <Select
               defaultValue={defaultValues?.category ?? ""}
-              onValueChange={(val) => setValue("category", val)}
+              onValueChange={(val) => setValue("category", val ?? "")}
             >
               <SelectTrigger
                 id="category"
